@@ -31,7 +31,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Main Stylesheet (Glassmorphism + Polymorphism + Mobile Optimizations) -->
+  <!-- Main Stylesheet (Universal Root & Subfolder Fallback) -->
+  <link rel="stylesheet" href="style.css" onerror="this.onerror=null;this.href='css/style.css';">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Favicon Vector -->
@@ -1539,8 +1540,9 @@
     </div>
   </nav>
 
-  <!-- Scripts -->
-  <script src="js/config.js"></script>
-  <script src="js/script.js"></script>
+  <!-- Scripts with Universal Auto-Fallback (Supports both root & js/ subfolder) -->
+  <script src="config.js" onerror="this.onerror=null;this.src='js/config.js';"></script>
+  <script src="script.js" onerror="this.onerror=null;this.src='js/script.js';"></script>
 </body>
 </html>
+
